@@ -1,0 +1,11 @@
+{
+  "name": "higgsfield-generate",
+  "displayName": "Higgsfield Generate",
+  "description": "Prompt-engineering and CLI/MCP workflow guide for Higgsfield AI image and video generation — model catalog, marketing modes, media inputs, and troubleshooting.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["higgsfield", "ai-video", "ai-image", "generation", "claude-code"]
+}

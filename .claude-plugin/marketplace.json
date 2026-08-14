@@ -1,0 +1,35 @@
+{
+  "name": "claude-skills",
+  "owner": {
+    "name": "Aashish Sapkota",
+    "url": "https://github.com/Ru0n"
+  },
+  "description": "A collection of standalone Claude Code skills: model prompting references, an iPhone-Mirroring automation guide, an audio/video transcription pipeline, an explanation-style skill, and a Higgsfield generation workflow.",
+  "plugins": [
+    {
+      "name": "gemma-4-31b-prompting",
+      "source": "./plugins/gemma-4-31b-prompting",
+      "description": "Expert reference for prompting, configuring, and deploying Google Gemma 4 31B via the Gemini API."
+    },
+    {
+      "name": "iphone-mirroring",
+      "source": "./plugins/iphone-mirroring",
+      "description": "Drive an iPhone from your Mac through the iPhone Mirroring app — launch, unlock-check, screenshot, and coordinate-map taps."
+    },
+    {
+      "name": "explain",
+      "source": "./plugins/explain",
+      "description": "Layered explanations (plain-language pitch, one mental model, real technical detail) for a smart non-specialist, with an optional rendered HTML diagram."
+    },
+    {
+      "name": "higgsfield-generate",
+      "source": "./plugins/higgsfield-generate",
+      "description": "Prompt-engineering and CLI/MCP workflow guide for Higgsfield AI image and video generation."
+    },
+    {
+      "name": "transcribe-audio",
+      "source": "./plugins/transcribe-audio",
+      "description": "Transcribe long, code-switched, or multi-language audio/video into clean verbatim Markdown using the Gemini API, with chunking and key rotation."
+    }
+  ]
+}

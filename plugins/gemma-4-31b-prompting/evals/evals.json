@@ -1,0 +1,47 @@
+{
+  "skill_name": "gemma-4-31b-prompting",
+  "evals": [
+    {
+      "id": 0,
+      "name": "brokerage-agent-prompt",
+      "prompt": "Write me a complete system prompt for our customer-support agent. It runs on Gemma 4 31B via the Gemini API and answers on WhatsApp for a Nepali stock brokerage firm. It should reply in Roman Nepali, keep replies short, stay on topic (account, orders, IPO, settlement), and it must never give investment advice or buy/sell recommendations. Give me the prompt plus a short note on the config to pair with it.",
+      "expected_output": "A Gemma-tuned system prompt that uses positive/affirmative framing for scope and language, a STRUCTURAL length limit (sentences/lines) rather than a word/char count, 3-5 positive Roman-Nepali examples, a scripted positive refusal for out-of-scope, at most an enumerable anti-preamble negative, and treats 'never give investment advice' as something to enforce with a scripted refusal + external guard rather than a pile of DON'T rules. Config note should mention maxOutputTokens + stopSequences + low temperature + thinking minimal.",
+      "files": [],
+      "assertions": [
+        {"text": "Length is controlled by a STRUCTURAL count (sentences/lines/bullets), not an exact word or character count"},
+        {"text": "Does NOT instruct the model to reply in an exact word count or character count as the primary length lever"},
+        {"text": "Uses positive/affirmative framing for the core rules (states what TO do), not a long list of DO-NOT/NEVER prohibitions"},
+        {"text": "Includes concrete positive Roman-Nepali example replies (show-don't-tell), ideally 3-5"},
+        {"text": "Handles the 'no investment advice' rule via a scripted positive refusal line and/or recommends external/guard enforcement, rather than relying solely on an in-prompt prohibition"},
+        {"text": "Pairs the prompt with API config (maxOutputTokens, and at least one of: stopSequences, temperature, thinking minimal)"}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "fix-negative-heavy-prompt",
+      "prompt": "Can you fix this Gemma 4 system prompt? It keeps ignoring the rules. Here it is:\n\n\"You are a support bot. DO NOT be rude. DO NOT use English. DO NOT write long messages. DO NOT use Devanagari script. NEVER talk about other companies. DO NOT make up answers. DO NOT exceed 200 characters. Don't be salesy.\"",
+      "expected_output": "A rewrite that converts the DO-NOT rules into positive directives (reply in Roman Nepali with an example; stay on these topics; reply in 2-3 sentences), replaces the 200-character cap with a structural count + maxOutputTokens, keeps any genuinely enumerable negative (anti-preamble) if useful, and ideally suggests a labelled WRONG/CORRECT contrastive example for a stubborn failure mode. Should explain WHY negatives fail on Gemma (priming).",
+      "files": [],
+      "assertions": [
+        {"text": "Converts the open-ended DO-NOT/NEVER rules into positive 'do this' directives"},
+        {"text": "Replaces the 'under 200 characters' rule with a structural length limit and/or maxOutputTokens, noting the model cannot reliably self-count characters"},
+        {"text": "Handles 'DO NOT use Devanagari' by stating the target script positively (reply in Roman Nepali) with an example, rather than keeping the prohibition"},
+        {"text": "Explains WHY negative/prohibition framing is unreliable (priming / the model attends to the named forbidden concept), not just that it should be changed"},
+        {"text": "If it keeps or recommends any negative, it is a specific enumerable surface form (e.g. anti-preamble), or it recommends a labelled contrastive WRONG/CORRECT example"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "exact-word-count",
+      "prompt": "Our Gemma 4 31B agent keeps writing replies that are too long. I want every reply to be exactly 50 words. How do I word the prompt to force exactly 50 words?",
+      "expected_output": "Should correct the premise: LLMs are token predictors with no internal word counter, so 'exactly 50 words' is followed unreliably. Recommend a structural target (e.g. 2-3 sentences / 3 lines) plus maxOutputTokens as a hard cap, and server-side truncation/verification if an exact count truly must hold. Should NOT just hand over a 'reply in exactly 50 words' instruction as if it works.",
+      "files": [],
+      "assertions": [
+        {"text": "States that the model cannot reliably hit an exact word count because it predicts tokens and has no internal counter"},
+        {"text": "Recommends a STRUCTURAL target (sentences/lines) instead of, or in addition to, the exact word count"},
+        {"text": "Recommends maxOutputTokens as the hard ceiling (and/or stopSequences)"},
+        {"text": "Does NOT simply provide 'reply in exactly 50 words' as a working solution without the caveat"}
+      ]
+    }
+  ]
+}

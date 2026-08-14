@@ -1,0 +1,11 @@
+{
+  "name": "explain",
+  "displayName": "Explain",
+  "description": "Layered explanations for a smart non-specialist — plain-language pitch, one mental-model analogy, then real technical detail with file paths and function names — with an optional rendered HTML diagram.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["explain", "documentation", "onboarding", "claude-code"]
+}

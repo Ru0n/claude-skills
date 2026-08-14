@@ -1,0 +1,11 @@
+{
+  "name": "iphone-mirroring",
+  "displayName": "iPhone Mirroring Control",
+  "description": "Drive an iPhone from a Mac through the iPhone Mirroring app — launch it, check lock state, screenshot the mirrored screen, and map coordinates for taps.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["iphone", "macos", "automation", "mirroring", "claude-code"]
+}

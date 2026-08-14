@@ -1,0 +1,11 @@
+{
+  "name": "gemma-4-31b-prompting",
+  "displayName": "Gemma 4 31B Prompting Reference",
+  "description": "Expert reference for prompting, configuring, and deploying Google Gemma 4 31B (gemma-4-31b-it) via the Gemini API — thinkingConfig, safety settings, chat template, tool calling, token collapse mitigation, code-switching, migration from Gemini 3 Flash.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["gemma", "prompting", "gemini-api", "llm", "claude-code"]
+}

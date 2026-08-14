@@ -1,0 +1,11 @@
+{
+  "name": "transcribe-audio",
+  "displayName": "Transcribe Audio",
+  "description": "Turn audio/video files into Markdown transcripts using the Gemini API — chunked processing, model-cascade fallback, API key rotation, and script-target transliteration for code-switched speech.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["transcription", "gemini", "audio", "video", "claude-code"]
+}
