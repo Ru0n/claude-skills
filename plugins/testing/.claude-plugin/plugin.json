@@ -1,0 +1,11 @@
+{
+  "name": "testing",
+  "displayName": "Pre-Production Testing Gauntlet",
+  "description": "Iron-clad pre-production testing gauntlet — five gates (dual independent adversarial review, non-prod test environment, Chrome DevTools functional/UI sweep, fix-and-retest loop, zero-context adversarial agent) with an evidence-only PROD GATE verdict.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["testing", "qa", "pre-production", "security-review", "claude-code"]
+}

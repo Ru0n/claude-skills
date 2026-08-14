@@ -35,6 +35,11 @@
       "name": "carousel-genius",
       "source": "./plugins/carousel-genius",
       "description": "Design and ship multi-slide social carousels using 5 reverse-engineered creator layouts. Works with any brand, or clean neutral defaults."
+    },
+    {
+      "name": "testing",
+      "source": "./plugins/testing",
+      "description": "Iron-clad pre-production testing gauntlet — five evidence-based gates ending in a PROD GATE verdict."
     }
   ]
 }
