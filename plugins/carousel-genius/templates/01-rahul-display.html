@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{title}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout 1 — Rahul (heavy display) */
+  :root {
+    --bg: #0B1733;
+    --bg-alt: #0B0C0C;
+    --red-cover: #E40A14;
+    --red-magenta: #EE1D52;
+    --text: #FFFFFF;
+    --muted: #7A7C7C;
+    --success: #00D67D;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1080px; height: 1440px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Public Sans', sans-serif;
+    overflow: hidden; position: relative;
+  }
+  /* Cover variant */
+  body.cover {
+    background:
+      radial-gradient(circle at 30% 25%, rgba(228,10,20,0.35) 0%, transparent 55%),
+      radial-gradient(circle at 75% 70%, rgba(238,29,82,0.25) 0%, transparent 60%),
+      var(--bg);
+  }
+
+  /* Persistent chrome */
+  .chrome { position: absolute; }
+  .chrome-tl { top: 40px; left: 80px; }
+  .chrome-tr { top: 56px; right: 80px; }
+  .chrome-bl { bottom: 56px; left: 80px; display: flex; align-items: center; gap: 10px; }
+  .chrome-br { bottom: 56px; right: 80px; }
+
+  .kicker-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 14px;
+    letter-spacing: 0.20em; text-transform: uppercase;
+    color: var(--red-magenta);
+  }
+  .chrome-bl .kicker-mono { color: rgba(255,255,255,0.85); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red-magenta); }
+
+  .logo-svg { width: 80px; height: 60px; fill: white; }
+
+  /* Cover headline (Rahul ALL-CAPS color swap) */
+  .headline-rahul {
+    position: absolute;
+    bottom: 220px; left: 80px; right: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 148px; line-height: 0.92;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: white;
+  }
+  .headline-rahul .red { color: var(--red-cover); }
+
+  /* Interior content */
+  .content {
+    position: absolute;
+    top: 200px; left: 80px; right: 80px; bottom: 200px;
+    display: flex; flex-direction: column; gap: 48px;
+  }
+
+  .section-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px; letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--red-magenta);
+  }
+
+  .section-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 96px; line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: white;
+  }
+  .section-headline .red { color: var(--red-cover); }
+
+  /* Step block */
+  .step-block { display: flex; gap: 40px; align-items: flex-start; }
+  .step-num {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700; font-size: 110px;
+    line-height: 0.95; letter-spacing: -0.04em;
+    color: var(--red-cover);
+    min-width: 130px;
+  }
+  .step-content { flex: 1; }
+  .step-imperative {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 84px; line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .step-desc { font-size: 28px; color: var(--muted); line-height: 1.4; }
+
+  /* Terminal block */
+  .terminal {
+    background: #0F0F1A;
+    border: 1px solid rgba(238,29,82,0.30);
+    border-radius: 12px;
+    padding: 28px 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    line-height: 1.6;
+  }
+  .t-cmd { color: white; }
+  .t-progress { color: #7A7C7C; }
+  .t-success { color: var(--success); }
+
+  /* Pill payoff */
+  .pill {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 12px;
+    background: rgba(238,29,82,0.10);
+    border: 1px solid rgba(238,29,82,0.30);
+    color: var(--red-magenta);
+    font-weight: 500; font-size: 26px;
+    letter-spacing: -0.01em;
+    margin-top: auto;
+  }
+</style>
+</head>
+<body class="{{body_class}}">
+  <!-- Persistent chrome -->
+  <div class="chrome chrome-tl">
+    {% if logo_svg %}{{logo_svg | safe}}{% else %}<div style="font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: white; letter-spacing: 0.02em;">{{brand_name}}</div>{% endif %}
+  </div>
+  <div class="chrome chrome-tr">
+    <span class="kicker-mono">{{section}} · {{slide_n}} / {{slide_total}}</span>
+  </div>
+  <div class="chrome chrome-bl">
+    <span class="dot"></span>
+    <span class="kicker-mono">@{{handle}}</span>
+  </div>
+  {% if not is_final %}
+  <div class="chrome chrome-br">
+    <span class="kicker-mono">{{swipe_cue}}</span>
+  </div>
+  {% else %}
+  <div class="chrome chrome-br">
+    <span class="kicker-mono">SAVE THIS ↓</span>
+  </div>
+  {% endif %}
+
+  {% if is_cover or is_final %}
+    <h1 class="headline-rahul">{{headline_html | safe}}</h1>
+  {% else %}
+    <div class="content">
+      {% if kicker %}<div class="section-kicker">{{kicker}}</div>{% endif %}
+      {% if step_num %}
+        <div class="step-block">
+          <div class="step-num">{{step_num}}</div>
+          <div class="step-content">
+            <div class="step-imperative">{{step_imperative}}</div>
+            <div class="step-desc">{{step_desc}}</div>
+          </div>
+        </div>
+      {% else %}
+        <h2 class="section-headline">{{headline_html | safe}}</h2>
+      {% endif %}
+
+      {% if terminal %}
+        <div class="terminal">
+          <div class="t-cmd">$ {{terminal.cmd}}</div>
+          <div class="t-progress">{{terminal.progress}}</div>
+          <div class="t-success">✓ {{terminal.success}}</div>
+        </div>
+      {% endif %}
+
+      {% if pill %}<div class="pill">{{pill}}</div>{% endif %}
+    </div>
+  {% endif %}
+</body>
+</html>

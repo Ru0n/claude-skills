@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{title}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout 2 — Marketing Harry (meta) */
+  :root {
+    --bg-cover: #000000;
+    --bg-light: #FAFAFA;
+    --text-light: #0B0C0C;
+    --text-dark: #FFFFFF;
+    --muted: #5C5C5C;
+    --card-border: #E5E5E5;
+    --gradient: linear-gradient(90deg, #FF1B6B 0%, #FF8A00 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1080px; height: 1440px;  /* 3:4 — the alt size */
+    font-family: 'Inter', sans-serif;
+    overflow: hidden; position: relative;
+  }
+  body.dark { background: var(--bg-cover); color: var(--text-dark); }
+  body.light { background: var(--bg-light); color: var(--text-light); }
+
+  /* Cover image overlay */
+  .cover-bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    z-index: 0;
+  }
+  .cover-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 80%);
+    z-index: 1;
+  }
+
+  /* Persistent chrome */
+  .chrome { position: absolute; z-index: 5; }
+  .chrome-tl { top: 50px; left: 50px; display: flex; align-items: center; gap: 12px; }
+  .chrome-tr { top: 60px; right: 50px; }
+  .chrome-bl { bottom: 60px; left: 50px; }
+  .chrome-br { bottom: 60px; right: 50px; }
+
+  .avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--gradient);
+  }
+  .handle-row {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600; font-size: 14px;
+  }
+  body.dark .handle-row { color: white; }
+  body.light .handle-row { color: var(--text-light); }
+
+  .counter {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  body.dark .counter { color: rgba(255,255,255,0.7); }
+  body.light .counter { color: var(--muted); }
+
+  /* Acronym footer (V·I·R·A·L style) */
+  .acronym {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600; font-size: 14px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }
+  .acronym .active {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .swipe-arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* Cover headline */
+  .cover-headline {
+    position: absolute;
+    bottom: 240px; left: 50px; right: 120px;
+    font-family: 'Anton', sans-serif;
+    font-size: 130px; line-height: 0.92;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: white;
+    z-index: 2;
+  }
+  .cover-headline .gradient {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Interior content */
+  .content {
+    position: absolute;
+    top: 180px; left: 50px; right: 120px; bottom: 180px;
+    display: flex; flex-direction: column; gap: 48px;
+  }
+
+  .interior-headline {
+    font-family: 'Anton', sans-serif;
+    font-size: 96px; line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .interior-headline .gradient {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Anatomy stamp card */
+  .stamp-card {
+    background: white;
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .stamp-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .stamp-figure {
+    font-family: 'Anton', sans-serif;
+    font-size: 180px; line-height: 1;
+    color: var(--text-light);
+  }
+  .stamp-body { font-family: 'Inter'; font-size: 22px; line-height: 1.5; color: var(--text-light); margin-top: 20px; }
+
+  /* Mock IG post */
+  .mock-ig {
+    width: 360px;
+    background: white;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 32px;
+  }
+  .mig-header { display: flex; padding: 12px; gap: 10px; align-items: center; }
+  .mig-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--gradient); }
+  .mig-handle { font-weight: 600; font-size: 14px; color: var(--text-light); }
+  .mig-time { font-size: 11px; color: #999; }
+  .mig-image { width: 100%; aspect-ratio: 1/1; background: linear-gradient(135deg, #1A1A1A, #5C1C8A); }
+  .mig-actions { padding: 10px 12px; font-size: 13px; color: var(--text-light); }
+  .mig-caption { padding: 0 12px 12px; font-size: 13px; line-height: 1.4; color: var(--text-light); }
+</style>
+</head>
+<body class="{{theme | default('dark')}}">
+  {% if cover_image %}
+    <div class="cover-bg" style="background-image: url('{{cover_image}}');"></div>
+    <div class="cover-overlay"></div>
+  {% endif %}
+
+  <div class="chrome chrome-tl">
+    <div class="avatar"></div>
+    <div class="handle-row">@{{handle}}</div>
+  </div>
+  <div class="chrome chrome-tr">
+    <span class="counter">{{slide_n}} / {{slide_total}}</span>
+  </div>
+  <div class="chrome chrome-bl">
+    <span class="acronym">{{acronym_html | safe}}</span>
+  </div>
+  {% if not is_final %}
+  <div class="chrome chrome-br">
+    <span class="swipe-arrow">{{swipe_cue}}</span>
+  </div>
+  {% else %}
+  <div class="chrome chrome-br">
+    <span class="swipe-arrow">SAVE ↓</span>
+  </div>
+  {% endif %}
+
+  {% if is_cover or is_final %}
+    <h1 class="cover-headline">{{headline_html | safe}}</h1>
+  {% else %}
+    <div class="content">
+      <h2 class="interior-headline">{{headline_html | safe}}</h2>
+      {% if stamp %}
+        <div class="stamp-card">
+          <div class="stamp-label">{{stamp.label}}</div>
+          <div class="stamp-figure">{{stamp.figure}}</div>
+          <div class="stamp-body">{{stamp.body}}</div>
+        </div>
+      {% endif %}
+      {% if mock_ig %}
+        <div class="mock-ig">
+          <div class="mig-header">
+            <div class="mig-avatar"></div>
+            <div>
+              <div class="mig-handle">@{{mock_ig.handle}}</div>
+              <div class="mig-time">{{mock_ig.time}}</div>
+            </div>
+          </div>
+          <div class="mig-image"></div>
+          <div class="mig-actions">♡ {{mock_ig.likes}} · 💬 {{mock_ig.comments}} · ↗</div>
+          <div class="mig-caption"><b>@{{mock_ig.handle}}</b> {{mock_ig.caption}}</div>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+# Example: Bare hook layout — text-only manifesto carousel
+# No design, no decoration, no italic. Just headline + chrome + brand color.
+# Use for: single-statement-per-slide decks, mic-drop manifestos, "fragment" carousels.
+
+title: "The agency model is over"
+slug: "manifesto-agency-over"
+layout: bare-hook
+
+brand:
+  name: YOUR BRAND
+  handle: your_handle
+
+slides:
+  # Slide 1 — dark hook (color accent only, no italic)
+  - theme: dark
+    kicker: "MANIFESTO · 01"
+    headline_html: |
+      The agency model
+      <span class="accent">is over.</span>
+
+  # Slide 2 — purple bg for rhythm
+  - theme: purple
+    kicker: "TRANSITION · 02"
+    headline_html: |
+      Embedded AI is
+      <span class="accent">eating the retainer.</span>
+
+  # Slide 3 — light bg for shock contrast
+  - theme: light
+    kicker: "READ · 03"
+    headline_html: |
+      The next decade belongs
+      to teams who build
+      <span class="accent">their own teammates.</span>
+
+  # Slide 4 — back to dark
+  - theme: dark
+    kicker: "STAKES · 04"
+    headline_html: |
+      Co-builders.
+      <span class="accent">Not chatbots.</span>
+
+  # Slide 5 — bare CTA
+  - theme: dark
+    kicker: "ASK · 05"
+    headline_html: |
+      Comment <span class="accent">EMBED</span>
+      to see the doc.
+    sub: "We embed AI agents inside creative teams. DM if that's yours."

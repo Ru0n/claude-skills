@@ -1,0 +1,65 @@
+# Example: Sago editorial layout — personal-brand thought-leadership
+# Hook archetype #1 (Contrarian punch) + Sago's editorial poster aesthetic
+
+title: "The agency model is over"
+slug: "agency-model-is-over"
+layout: sago
+
+brand:
+  name: YOUR BRAND
+  handle: your_handle
+
+slides:
+  # Slide 1: Hook — paper bg, red accent word
+  - section: AGENCY 2026
+    theme: paper
+    headline_html: |
+      THE AGENCY MODEL
+      IS <span class="red">OVER.</span>
+    subhead: "Embedded AI is eating the retainer. A read on what comes next."
+
+  # Slide 2: Quote on charcoal
+  - theme: charcoal
+    section: THE PIVOT
+    headline_html: |
+      THE PROBLEM ISN'T
+      <span class="red">THE MODEL.</span>
+    quote:
+      text: "It's the workflow you wrapped around it."
+      attribution: "Every studio I've helped onboard AI"
+
+  # Slide 3: Body para on paper
+  - theme: paper
+    section: THE STAKES
+    headline_html: |
+      RETAINERS ARE
+      <span class="red">LIQUID NOW.</span>
+    body: "Three of my clients shipped what used to be 14-day storyboard cycles in 38 minutes last quarter. The agencies they fired didn't see it coming. The ones I'm working with now embed agents inside the team and bill on shipped artifacts, not hours."
+
+  # Slide 4: Charcoal contrast
+  - theme: charcoal
+    section: THE READ
+    headline_html: |
+      AGENCIES THAT WIN
+      <span class="red">BUILD TEAMMATES,</span>
+      NOT DECKS.
+    quote:
+      text: "Co-builders. Not chatbots."
+
+  # Slide 5: Story beat on paper
+  - theme: paper
+    section: THE PROOF
+    headline_html: |
+      I LOST A $40K
+      <span class="red">RETAINER</span>
+      THE WEEK I SHIPPED THIS.
+    body: "Then I picked up two new ones who'd seen the same writing on the wall. Same revenue. Half the hours. Different game."
+
+  # Slide 6: CTA — manifesto close
+  - theme: charcoal
+    section: THE ASK
+    headline_html: |
+      THE NEXT DECADE OF
+      CREATIVE WORK BELONGS
+      TO TEAMS WHO
+      <span class="red">BUILD THEIR OWN.</span>

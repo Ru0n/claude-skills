@@ -1,0 +1,81 @@
+# Example carousel brief — Terminal / monospace layout
+# Story: "9 AI agents creative teams will actually use" (Listicle promise hook, archetype #5)
+
+title: "9 AI agents for creative teams"
+slug: "9-agents-creative"
+layout: terminal       # one of: rahul, harry, sago, terminal, photo, bare
+
+brand:
+  name: YOUR BRAND
+  handle: your_handle
+  # logo_svg: optional inline SVG markup; falls back to text wordmark
+
+slides:
+  # --- Slide 1: Hook (cover) ---
+  - section: THE LIST
+    headline_html: |
+      9 AI agents creative teams
+      will <span class="accent">actually use.</span>
+    subtext: "Stack, not chatbots. Each one ships a real artifact."
+
+  # --- Slide 2: Promise (swipe-survival) ---
+  - section: THE STAKES
+    kicker: SWIPE SURVIVAL
+    headline_html: |
+      By slide 8 you'll have the
+      <span class="accent">exact 4-agent stack</span> we ship to clients.
+    pill: "Same output. Fraction of the time."
+
+  # --- Slide 3: Step 1 (terminal block proof) ---
+  - section: STEP 01
+    kicker: ONBOARDING
+    headline_html: |
+      Brief intake → <span class="accent">first storyboard</span> in 38 minutes.
+    terminal:
+      cmd: "claude run brief-intake.md"
+      progress: "Parsing brief... matching 8 brand tokens..."
+      success: "First storyboard ready. 38m 14s."
+    pill: "Agencies: 6 weeks. This stack: one weekend."
+
+  # --- Slide 4: Step 2 (numerical hero) ---
+  - section: STEP 02
+    num_hero: "$11.4k"
+    num_label: SAVED PER CLIENT ONBOARDING
+
+  # --- Slide 5: Step 3 (framework list — design.deb pattern) ---
+  - section: STEP 03
+    kicker: THE STACK
+    headline_html: |
+      Three rules. <span class="accent">That's the agent.</span>
+    framework:
+      - num: "01"
+        title: "Pick the trigger"
+        body: "Slack message, form submit, or cron — pick one entry point per agent."
+      - num: "02"
+        title: "Pick the model + tools"
+        body: "Claude Sonnet 4.6 + 2-3 MCP servers. No more, no less."
+      - num: "03"
+        title: "Pick the artifact"
+        body: "Every agent ships ONE file. PDF, doc, slack message. Never a chat."
+    pill: "Three rules. Different soul each time."
+
+  # --- Slide 6: Data table (proof) ---
+  - section: THE READ
+    kicker: BENCHMARKS
+    headline_html: |
+      The numbers that <span class="accent">end the debate.</span>
+    data_table:
+      cols: ["Agent", "Time saved", "Used by"]
+      rows:
+        - ["Brief intake", "11 hrs/wk", "PMs"]
+        - ["Storyboard pass", "8 hrs/wk", "Designers"]
+        - ["Asset QA", "6 hrs/wk", "Producers"]
+        - ["Client report", "4 hrs/wk", "Account leads"]
+    pill: "$29k saved per studio per quarter."
+
+  # --- Slide 7: CTA (final, rhymes with cover) ---
+  - section: THE CTA
+    headline_html: |
+      Which agent would you wire up first —
+      <span class="accent">onboarding or QA?</span>
+    subtext: "Comment 'STACK' — I'll DM the doc we use with clients."

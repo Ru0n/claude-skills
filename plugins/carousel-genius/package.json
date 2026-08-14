@@ -1,0 +1,19 @@
+{
+  "name": "carousel-genius",
+  "version": "1.0.0",
+  "description": "A Claude Code skill that ships multi-slide carousels using one of 5 reverse-engineered creator layouts.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdfkit": "^0.18.0",
+    "playwright": "^1.59.1"
+  }
+}

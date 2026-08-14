@@ -1,0 +1,73 @@
+# Example: photo-narrative layout — case study / atmospheric mood
+# Hook archetype #9 (Before/after compression) + Layout 5's photo-rhythm pattern
+
+title: "From 14-day storyboards to 38 minutes"
+slug: "14-day-to-38-min"
+layout: photo
+
+brand:
+  name: YOUR BRAND
+  handle: your_handle
+
+slides:
+  # Slide 1: photo cover with overlay
+  - body_class: photo
+    section: CASE STUDY
+    caption: "THE STUDIO · MAY 2026"
+    headline_html: |
+      From 14-day storyboards
+      to <span class="accent">38 minutes.</span>
+    # photo_path: "./assets/hero-studio.jpg"  # Soul V2 generated
+
+  # Slide 2: designed — set the stakes
+  - body_class: designed
+    section: THE PAIN
+    kicker: WHAT IT REPLACED
+    headline_html: |
+      Their storyboard cycle
+      <span class="accent">cost $11k per pitch.</span>
+    body_text: "Two weeks of storyboard revisions. Three designers stuck in one Slack thread. The third revision was always the keeper. The two before it were a tax."
+
+  # Slide 3: photo
+  - body_class: photo
+    section: THE WORKFLOW
+    caption: "DAY 1 · WEDNESDAY 9:43AM"
+    headline_html: |
+      Brief in. <span class="accent">First pass</span>
+      in 38 minutes.
+
+  # Slide 4: designed — quote
+  - body_class: designed
+    section: THE READ
+    kicker: WHAT THE FOUNDER SAID
+    headline_html: |
+      It wasn't the model.
+      <span class="accent">It was the wiring.</span>
+    body_quote: "We tried ChatGPT for six months. Same prompts. Wrong fit. Then we wired Claude into Figma directly and shipped a campaign on a Tuesday."
+    pill: "Co-builder, not a chatbot."
+
+  # Slide 5: photo
+  - body_class: photo
+    section: THE PROOF
+    caption: "WEEK 4 · OUTPUT METRIC"
+    headline_html: |
+      11 campaigns shipped.
+      <span class="accent">Two designers.</span>
+
+  # Slide 6: designed — pill payoff
+  - body_class: designed
+    section: THE NUMBERS
+    kicker: 4 WEEKS LATER
+    headline_html: |
+      $44k saved. Same team.
+      <span class="accent">Different game.</span>
+    body_text: "Four weeks. Eleven campaigns. Two designers. The only thing that changed was the workflow. The models had been there the whole time."
+    pill: "$44k saved. Four weeks. No new hires."
+
+  # Slide 7: photo CTA
+  - body_class: photo
+    section: THE ASK
+    caption: "DM EMBED"
+    headline_html: |
+      Want this <span class="accent">embedded</span>
+      in your studio?

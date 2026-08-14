@@ -1,0 +1,68 @@
+# Example: Marketing Harry layout — meta carousel about carousels
+# Hook archetype #4 (Curiosity gap) + Harry's anatomy stamps + mock IG proof
+
+title: "The ART of viral carousels"
+slug: "art-of-viral-carousels"
+layout: harry
+
+brand:
+  name: MARKETING HARRY
+  handle: your_handle
+
+slides:
+  # Slide 1: Cover — dark, gradient accent word
+  - theme: dark
+    headline_html: |
+      The ART of <span class="gradient">VIRAL</span>
+      carousels
+    acronym_html: '<span class="active">A</span> · R · T'
+
+  # Slide 2: Light — A is for ATTENTION
+  - theme: light
+    headline_html: |
+      A is for <span class="gradient">ATTENTION</span>
+    stamp:
+      label: "ANATOMY OF A HOOK"
+      figure: "A"
+      body: "First-second rule. If slide 1 doesn't stop the thumb, the other 6 don't exist. Use a named villain + a named number + one tweetable line."
+    acronym_html: '<span class="active">A</span> · R · T'
+
+  # Slide 3: Dark — R is for RHYTHM
+  - theme: dark
+    headline_html: |
+      R is for <span class="gradient">RHYTHM</span>
+    stamp:
+      label: "PACING"
+      figure: "R"
+      body: "Alternating dark + light slides hold attention. One idea per slide. Never two competing thoughts. The human eye scans, doesn't read."
+    acronym_html: 'A · <span class="active">R</span> · T'
+
+  # Slide 4: Light — T is for TENSION
+  - theme: light
+    headline_html: |
+      T is for <span class="gradient">TENSION</span>
+    stamp:
+      label: "SWIPE MOTIVATION"
+      figure: "T"
+      body: "Every non-final slide ends with a withheld payoff. The arrow alone doesn't earn the swipe. The headline does."
+    acronym_html: 'A · R · <span class="active">T</span>'
+
+  # Slide 5: Dark — Mock IG proof
+  - theme: dark
+    headline_html: |
+      Here's what <span class="gradient">300k saves</span>
+      looked like.
+    mock_ig:
+      handle: "marketingharry"
+      time: "2d"
+      likes: "12.4k"
+      comments: "412"
+      caption: "ART → 300k saves. Save this and try it on your next post."
+    acronym_html: 'A · R · T'
+
+  # Slide 6: Final — CTA, dark
+  - theme: dark
+    headline_html: |
+      Save it. Or <span class="gradient">try it</span>
+      on your next post.
+    acronym_html: 'A · R · T → <span class="active">SAVE</span>'

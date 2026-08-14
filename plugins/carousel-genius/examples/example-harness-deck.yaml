@@ -1,0 +1,207 @@
+# THE HARNESS DECK — 3 patterns from Hermes + OpenClaw → my Claude Code setup
+# Source: ~/.claude/research/OpenClaw_Hermes_Harness_Comparison_20260510/
+# Voice: Register 4 (clean grammar, specific numbers, casual asides)
+# Body sequence (varied): cover / pull-quote / harness-grid / compare / framework+ghost / icon-row / term-side / data-table / accent-statement / cta
+
+title: "Why my Claude Code setup gets faster every week"
+slug: "harness-deck-final"
+layout: terminal
+
+brand:
+  name: YOUR BRAND
+  handle: your_handle
+
+slides:
+  # ─── 1: COVER (cream — question hook) ───
+  - theme: light
+    section: "HARNESS · PLAYBOOK"
+    headline_html: |
+      Why does my Claude Code setup
+      <span class="accent">get faster every week?</span>
+    subtext: "3 patterns I stole from Hermes Agent + OpenClaw. Here's what I wired in."
+    cover_pill: "PLAYBOOK"
+
+  # ─── 2: PULL-QUOTE (cream + the real HN complaint) ───
+  - theme: light
+    section: "THE PAIN"
+    kicker: TOP HN COMPLAINT · 2026
+    pullquote:
+      text_html: |
+        CLAUDE.md is just a markdown file
+        where I say <span class="accent">'hey Claude please use X agent'</span>
+        and then pray.
+      attribution: "Hacker News · OpenCode thread"
+    pill: "Hopeful markdown is the wrong primitive."
+
+  # ─── 3: 3 HARNESSES (cream + harness grid) ───
+  - theme: light
+    section: "THE FIELD"
+    kicker: 3 HARNESSES · ALL RUN CLAUDE UNDERNEATH
+    headline_html: |
+      Three harnesses,
+      <span class="accent">three different shapes.</span>
+    harness_cards:
+      - logo_icon: hermes
+        name: "Hermes"
+        positioning: "Self-improving. Auto-writes a skill file after every non-trivial task. Compounds."
+        stat: "95.6K STARS · 6 BACKENDS"
+        tier: "good"
+      - logo_icon: openclaw
+        logo_multicolor: true
+        name: "OpenClaw"
+        positioning: "Automation runtime. Declarative SOUL/AGENTS/TOOLS files, 30-min heartbeat, 8 channels."
+        stat: "8 CHANNELS · 30-MIN HEARTBEAT"
+        tier: "flag"
+      - logo_icon: claude
+        name: "Claude Code"
+        positioning: "1M context · sub-agents · MCP. Best inner loop. Outer loop is hopeful markdown."
+        stat: "1M CTX · MCP · HOOKS"
+        tier: "default"
+    pill: "Both Hermes and OpenClaw call Claude Code as a sub-tool. The harness is the contested layer."
+
+  # ─── 4: PATTERN 1 — STRUCTURED CONFIG (cream + code comparison) ───
+  - theme: light
+    section: "PATTERN 01"
+    kicker: LOAD-BEARING CONFIG
+    headline_html: |
+      Markdown is a suggestion.
+      <span class="accent">YAML is a rule.</span>
+    code_compare:
+      bad:
+        filename: "CLAUDE.md"
+        body_html: |
+          <div class="code-strike"># Routing</div>
+          <div class="code-strike">Always use leads-agent</div>
+          <div class="code-strike">for /leads/* files.</div>
+          <div class="code-strike">(...the model forgets</div>
+          <div class="code-strike">half the time.)</div>
+      good:
+        filename: "agents-routing.yaml"
+        body_html: |
+          <span class="yaml-comment"># enforced at session start</span>
+          <span class="yaml-key">routes:</span>
+          &nbsp;&nbsp;<span class="yaml-key">"leads/*":</span> <span class="yaml-val">leads-agent</span>
+          &nbsp;&nbsp;<span class="yaml-key">"api/*":</span> <span class="yaml-val">router-agent</span>
+          &nbsp;&nbsp;<span class="yaml-key">"docs/*":</span> <span class="yaml-val">writer-agent</span>
+    pill: "Structured config = deterministic routing. Markdown = vibes."
+
+  # ─── 5: PATTERN 2 — AUTO-SKILL (cream + framework + ghost "5") ───
+  - theme: light
+    ghost_numeral: "5"
+    section: "PATTERN 02"
+    kicker: AUTO-SKILL GENERATION · HERMES LOOP
+    headline_html: |
+      Five steps. Step 4
+      <span class="accent">is the killer.</span>
+    framework:
+      - num: "01"
+        title: "Receive message"
+        body: "You hit run. Standard."
+      - num: "02"
+        title: "Retrieve memory"
+        body: "Load past skills + session notes from git-tracked memory."
+      - num: "03"
+        title: "Reason + act"
+        body: "Solve the task. Run tools. Hit the goal."
+      - num: "04"
+        title: "Document outcome. Write a skill file."
+        body: "Stop hook tells the model to write what it learned. Saves to skills/<topic>.md. That's the killer."
+      - num: "05"
+        title: "Persist for next session"
+        body: "Next run loads the skill. Same task drops 20 min → 8 min by week 6."
+    pill: "Hermes operators report ~40% saved on repeat tasks by week 6. The agent compounds."
+
+  # ─── 6: PATTERN 3 — DECOUPLED BACKEND (cream + icon row) ───
+  - theme: light
+    section: "PATTERN 03"
+    kicker: DECOUPLED EXECUTION
+    headline_html: |
+      Brain in your terminal.
+      <span class="accent">Hands on a remote worker.</span>
+    icon_row:
+      - logo_icon: terminal
+        label: "LAPTOP / LOCAL"
+      - logo_icon: docker
+        svg_class: "docker"
+        label: "DOCKER / CONTAINER"
+      - logo_icon: modal
+        svg_class: "modal"
+        label: "MODAL / SERVERLESS"
+    pill: "Hermes ships 6 backends. I run /loop 30m on laptop + a cloud VPS for heavy work."
+
+  # ─── 7: WHAT I WIRED (cream + terminal + side framework) ───
+  - theme: light
+    section: "MY SETUP"
+    kicker: WHAT I WIRED IN
+    headline_html: |
+      Three files.
+      <span class="accent">Same Claude Code.</span>
+    term_side:
+      terminal:
+        - type: "cmd"
+          text: "$ ls ~/.claude/"
+        - type: "progress"
+          text: "agents-routing.yaml"
+        - type: "progress"
+          text: "hooks/stop-skill.sh"
+        - type: "progress"
+          text: "loop-heartbeat.md"
+        - type: "success"
+          text: "✓ harness · ready"
+      framework:
+        - num: "01"
+          title: "agents-routing.yaml"
+          body: "Pattern 1. Hook reads at session start. Sub-agents fire deterministically."
+        - num: "02"
+          title: "hooks/stop-skill.sh"
+          body: "Pattern 2. Stop event → skill file written. Compounding starts."
+        - num: "03"
+          title: "/loop 30m + VPS"
+          body: "Pattern 3. Heartbeat on laptop. Heavy work on a cloud VPS."
+    pill: "Three files. No new tools. Same Claude underneath."
+
+  # ─── 8: PROJECTED GAINS (cream + 3 hero stat cards) ───
+  - theme: light
+    section: "PROJECTED · 4 WEEKS"
+    kicker: BASED ON HERMES OPERATOR REPORTS
+    headline_html: |
+      What the 3 patterns
+      <span class="accent">give me back.</span>
+    stat_grid:
+      - label: "REPEAT TASK TIME"
+        before: "22 min"
+        after: "9 min"
+        hero: "−59%"
+        arrow: "↓ time per task"
+        dir: "down"
+      - label: "TOKENS / TASK"
+        before: "18k"
+        after: "6k"
+        hero: "−67%"
+        arrow: "↓ tokens spent"
+        dir: "down"
+      - label: "SKILLS AUTO-SAVED"
+        before: "0/mo"
+        after: "14/mo"
+        hero: "+14×"
+        arrow: "↑ compounding"
+        dir: "up"
+    pill: "Same Claude underneath. Numbers projected from Hermes operator reports. Measurement starts this week."
+
+  # ─── 9: CLIMAX (FULL ACCENT — the thesis) ───
+  - theme: accent
+    section: "THE THESIS"
+    kicker: ONE LINE · TWO BEATS
+    headline_html: |
+      The model is a commodity.
+      <span class="accent">The wiring is the craft.</span>
+    pill: "Build for the harness. Model swap is free."
+
+  # ─── 10: CTA (cream — comment HARNESS) ───
+  - theme: light
+    section: "THE ASK"
+    headline_html: |
+      Comment <span class="accent">HARNESS.</span>
+      I'll DM the 3 files.
+    subtext: "agents-routing.yaml. The Stop-hook script. The /loop heartbeat template. Pull all of it."
+    cover_pill: "FOLLOW @yourhandle"

@@ -1,0 +1,11 @@
+{
+  "name": "carousel-genius",
+  "displayName": "Carousel Genius",
+  "description": "Design and ship multi-slide carousels (Instagram, LinkedIn, TikTok, X) using one of 5 reverse-engineered creator layouts. Works with any brand, or clean neutral defaults if you don't specify one.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["carousel", "instagram", "linkedin", "social-media", "design", "claude-code"]
+}

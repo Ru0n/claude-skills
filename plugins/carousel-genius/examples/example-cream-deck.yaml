@@ -1,0 +1,181 @@
+# Cream deck — illustrative numbers, swap in your own verified metrics before shipping
+# Hook: a cheap, always-on support agent that's been live for months
+# Thesis: build for the harness, not the model
+# Body variety: cover / mockup / compare / framework+ghost / terminal / data-table / framework+thumbs / size / accent / cta
+
+title: "$2.51 in AI cost. Four months live."
+slug: "harness-cream-deck"
+layout: terminal
+
+brand:
+  name: YOUR BRAND
+  handle: your_handle
+
+slides:
+  # ─── 1: COVER (cream — the receipt as hook) ───
+  - theme: light
+    section: "YOUR BRAND · 2026"
+    headline_html: |
+      $2.51 in AI cost.
+      <span class="accent">20,268 messages.</span>
+      Four months live.
+    subtext: "One support agent. 992 unique leads. 2.4% human handoff. Here's the wiring. (Illustrative numbers — swap in your own.)"
+    cover_pill: "RECEIPT"
+
+  # ─── 2: TRACK RECORD (cream + profile mockup) ───
+  - theme: light
+    section: "WHO I AM"
+    kicker: YOUR BRAND · YOUR CITY
+    headline_html: |
+      I ship AI agents.
+      <span class="accent">Then I keep them alive.</span>
+    mockup:
+      handle: "@your_handle"
+      meta: "Your studio · AI implementation"
+      avatar_letter: "A"
+      stats:
+        - num: "2,103"
+          label: "leads · 14 days"
+        - num: "20,268"
+          label: "msgs · 4 months"
+        - num: "$2.51"
+          label: "total AI cost"
+      bio: "The agent stays up because the wiring is the moat — not the model. Same pattern across every client."
+      annotation_html: 'Real numbers. <span class="accent">No demos.</span>'
+    pill: "Built it. Shipped it. Watched it run for 124 days."
+
+  # ─── 3: COMPARE (cream + bad-vs-good cards — different body type) ───
+  - theme: light
+    section: "THE SHIFT"
+    kicker: WHAT MOST TEAMS STILL DO
+    headline_html: |
+      Most teams build for the model.
+      <span class="accent">I build for the harness.</span>
+    compare:
+      bad:
+        title: "Model-first"
+        body: "Open ChatGPT. Copy. Paste. Re-prompt. Switch tab. Lose state. Pay for a seat the team forgets to log into."
+      good:
+        title: "Harness-first"
+        body: "Workflow lives in markdown. Cron, Slack, form trigger. Memory in a git repo. Swap the model underneath, the agent survives."
+    pill: "Build the durable workflow once. Swap the model underneath."
+
+  # ─── 4: FRAMEWORK + GHOST 3 (cream — what every live agent shares) ───
+  - theme: light
+    ghost_numeral: "3"
+    section: "THE PATTERN"
+    kicker: WHAT EVERY SHIPPED AGENT HAS
+    headline_html: |
+      Three things every agent
+      <span class="accent">runs on. No exceptions.</span>
+    framework:
+      - num: "01"
+        title: "Async trigger. Never a chat box."
+        body: "Form submit, Slack message, cron, webhook. The agent runs without a tab open."
+      - num: "02"
+        title: "Output is a file."
+        body: "Doc, PDF, calendar event, message reply. Something the human archives — never just a thread."
+      - num: "03"
+        title: "Memory in a git repo."
+        body: "strategy.md, agents.md, trade_log.md. The agent reads itself into being on every run."
+    pill: "These three are the harness. The model is interchangeable."
+
+  # ─── 5: TERMINAL (cream + illustrative cmd from an outreach pipeline) ───
+  - theme: light
+    section: "WHAT IT LOOKS LIKE"
+    kicker: OUTBOUND PIPELINE · LIVE EXAMPLE
+    headline_html: |
+      Lead drops in. <span class="accent">Personalized email out.</span>
+      Zero tab-switching.
+    terminal:
+      cmd: "claude run brief-intake.md --client acme-realty"
+      progress: "scraper pulls site... model reads tagline + listings... email queues 1 send..."
+      success: "Sent to ops@acme-realty.com · 12:43 · workflow logged → ✓"
+    pill: "Four connectors. $10/mo total."
+
+  # ─── 6: DATA TABLE (cream + illustrative production numbers) ───
+  - theme: light
+    section: "THE NUMBERS"
+    kicker: 4 MONTHS IN PRODUCTION
+    headline_html: |
+      What the data
+      <span class="accent">actually looks like.</span>
+    data_table:
+      cols: ["Window", "Messages", "Leads", "AI cost"]
+      rows:
+        - ["Month 1 (ramp)", "41", "12", "$0.01"]
+        - ["Month 2", "1,924", "118", "$0.18"]
+        - ["Month 3", "7,608", "281", "$0.94"]
+        - ["Month 4 (peak)", "9,538", "412", "$1.21"]
+        - ["Month 5 (first 7 days)", "1,157", "169", "$0.17"]
+        - ["TOTAL", "20,268", "992", "$2.51"]
+    pill: "$2.51 total. Across 124 days. The model is a commodity."
+
+  # ─── 7: FRAMEWORK + THUMBS (cream — 3 deck types, side previews) ───
+  - theme: light
+    section: "THE DECK SYSTEM"
+    kicker: 3 SLIDE TYPES · REUSE FOREVER
+    headline_html: |
+      Same template every post.
+      <span class="accent">Different soul.</span>
+    framework:
+      - num: "01"
+        title: "Hook slide"
+        body: "Confirm the take. Push the swipe. Two slides max."
+      - num: "02"
+        title: "Value slide"
+        body: "Diagram, mockup, screenshot, terminal. Little text, lot of proof."
+      - num: "03"
+        title: "Named-CTA slide"
+        body: "One trigger word. Comment STACK. Never 'DM us to learn more.'"
+    side_thumbs:
+      - kicker: "HOOK"
+        headline_html: '$2.51 in AI cost. <span class="accent">20,268 messages.</span>'
+      - kicker: "VALUE"
+        headline_html: 'Three things every agent <span class="accent">runs on.</span>'
+      - kicker: "CTA"
+        headline_html: 'Comment <span class="accent">STACK.</span>'
+    pill: "Same template. Different soul every post."
+
+  # ─── 8: SIZE GRID (cream — carousel specs) ───
+  - theme: light
+    section: "THE SPECS"
+    kicker: WHAT WE LOCK
+    headline_html: |
+      Every carousel ships at
+      <span class="accent">these specs.</span>
+    size_cards:
+      - tier: "bad"
+        label: "1:1"
+        ratio: "1:1"
+        dim: "1080×1080"
+        verdict: "Don't post"
+      - tier: "ok"
+        label: "4:5"
+        ratio: "4:5"
+        dim: "1080×1350"
+        verdict: "Boost only"
+      - tier: "good"
+        label: "3:4"
+        ratio: "3:4"
+        dim: "1080×1440"
+        verdict: "Default"
+    pill: "Music on every IG carousel = Reels tab too. Free distribution."
+
+  # ─── 9: CLIMAX (FULL ACCENT — the thesis as climax statement) ───
+  - theme: accent
+    section: "THE THESIS"
+    kicker: ONE LINE · TWO BEATS
+    headline_html: |
+      The model is a commodity.
+      <span class="accent">The wiring is the craft.</span>
+    pill: "Build for the harness. The model swap is free."
+
+  # ─── 10: CTA (cream — closes back) ───
+  - theme: light
+    section: "THE ASK"
+    headline_html: |
+      Comment <span class="accent">STACK.</span>
+      I'll DM the doc.
+    subtext: "The 4-connector outbound stack. The database schema. The agents.md memory pattern — all of it."
+    cover_pill: "FOLLOW @yourhandle"

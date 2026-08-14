@@ -1,0 +1,188 @@
+# Translation of @design.deb's "How to become a Carousel Genius" 10-slide deck
+# His structure, generic AI-agents content — illustrative numbers, swap in your own
+# Rhythm: dark → cream → dark+stripe → dark+ghost → cream → dark → cream → dark → ACCENT-FULL → dark
+
+title: "How to ship AI agents that actually run"
+slug: "ship-ai-agents-deb-style"
+layout: terminal
+
+brand:
+  name: YOUR BRAND
+  handle: your_handle
+
+slides:
+  # ─── 1: COVER (DARK + heavy glow) ───
+  - section: "PLAYBOOK"
+    headline_html: |
+      How to ship
+      <span class="accent">AI agents</span>
+      that actually run.
+    subtext: "Not chatbots. Not demos. Real agents that ship one artifact every day."
+    cover_pill: "BUILD"
+
+  # ─── 2: TRACK RECORD (CREAM/LIGHT — first rhythm shift) ───
+  - theme: light
+    section: "TRACK RECORD"
+    kicker: WHY LISTEN
+    headline_html: |
+      I've shipped <span class="accent">11 brands'</span>
+      agent stacks.
+    mockup:
+      handle: "@your_handle"
+      meta: "Your studio · AI implementation"
+      avatar_letter: "A"
+      stats:
+        - num: "47"
+          label: "agents shipped"
+        - num: "11"
+          label: "brands"
+        - num: "$340k"
+          label: "client savings"
+      bio: "AI implementation studio. We embed agents inside creative + ops teams. One artifact per day, every day."
+      annotation_html: 'Same playbook for <span class="accent">every brand.</span>'
+    pill: "Built it. Shipped it. Wrote the doc."
+
+  # ─── 3: STAT PROOF (DARK + DIAGONAL STRIPE breaks the grid) ───
+  - diagonal_stripe: true
+    section: "THE MARKET"
+    kicker: STATE OF AGENTS · 2026
+    headline_html: |
+      Agent jobs <span class="accent">tripled</span>
+      this quarter.
+    framework:
+      - num: "84%"
+        title: "of creative teams asked for AI agents"
+        body: "Up from 27% last year. The ask is internal now."
+      - num: "11h"
+        title: "saved per agent per week"
+        body: "Brief intake, QA, reporting — the agent layer absorbs grunt work."
+      - num: "$11k"
+        title: "average saved per onboarding"
+        body: "Embedded agents replace one revision cycle entirely."
+    pill: "The window's open. It won't be next year."
+
+  # ─── 4: FRAMEWORK (DARK + GHOST NUMERAL "3" floats behind) ───
+  - ghost_numeral: "3"
+    section: "THE STACK"
+    kicker: ANATOMY OF AN AGENT
+    headline_html: |
+      Every agent is <span class="accent">three rules.</span>
+    framework:
+      - num: "01"
+        title: "Pick the trigger"
+        body: "Slack message, form submit, or cron. One entry point per agent."
+      - num: "02"
+        title: "Pick the model + tools"
+        body: "One model + 2-3 MCP servers. No more, no less."
+      - num: "03"
+        title: "Pick the artifact"
+        body: "Every agent ships ONE file. PDF, doc, message. Never a chat."
+    pill: "Three rules. Different soul each time."
+
+  # ─── 5: TEMPLATE (CREAM/LIGHT — dark thumb cards on cream pop hard) ───
+  - theme: light
+    section: "THE TEMPLATE"
+    kicker: 3 SLIDES YOU REUSE
+    headline_html: |
+      Three <span class="accent">slide types.</span>
+      Reuse forever.
+    framework:
+      - num: "01"
+        title: "Hook slide"
+        body: "Confirm the hook on slide 2 & push people."
+      - num: "02"
+        title: "Value slide"
+        body: "A little bit of text. Lot of visuals."
+      - num: "03"
+        title: "CTA slide"
+        body: "Image of yours + 1 simple action."
+    side_thumbs:
+      - kicker: "01"
+        headline_html: 'How to ship <span class="accent">AI agents</span> that actually run.'
+      - kicker: "02"
+        headline_html: 'A little text. <span class="accent">Lot of proof.</span>'
+      - kicker: "03"
+        headline_html: 'Comment <span class="accent">STACK.</span>'
+    pill: "Same template. Different soul."
+
+  # ─── 6: FORMATS (DARK + GHOST NUMERAL "5") ───
+  - ghost_numeral: "5"
+    section: "THE FORMATS"
+    kicker: 5 AGENT TYPES
+    headline_html: |
+      Five formats. <span class="accent">Pick one.</span>
+    framework:
+      - num: "01"
+        title: "Brief intake agent"
+        body: "Message → first draft in minutes."
+      - num: "02"
+        title: "QA agent"
+        body: "Async asset checks. Catches what humans miss."
+      - num: "03"
+        title: "Onboarding agent"
+        body: "Client kickoff in a day, not a week."
+      - num: "04"
+        title: "Reporting agent"
+        body: "Weekly client report. Auto-shipped Friday 9am."
+      - num: "05"
+        title: "Outreach agent"
+        body: "Personalized at scale. Real research, not spam."
+    pill: "Five agents. One studio. $44k saved a month."
+
+  # ─── 7: DESIGN (CREAM/LIGHT — third rhythm shift) ───
+  - theme: light
+    section: "THE DESIGN"
+    kicker: 3 RULES
+    headline_html: |
+      Carousel design — <span class="accent">three rules.</span>
+    framework:
+      - num: "01"
+        title: "Pick 2 fonts"
+        body: "Headline + Body. This skill defaults to Public Sans + JetBrains Mono."
+      - num: "02"
+        title: "Pick 3 colors"
+        body: "Background + Text + Accent. Lock them for the whole deck."
+      - num: "03"
+        title: "Pick a consistent image style"
+        body: "Cinematic, realism, editorial — pick one. Dark, moody, intentional negative space."
+    pill: "Constraints make the brand. Lock them and ship."
+
+  # ─── 8: SIZE (DARK + DIAGONAL STRIPE behind cards) ───
+  - diagonal_stripe: true
+    section: "THE SIZE"
+    kicker: WHAT TO POST
+    headline_html: |
+      Post at <span class="accent">1080×1440.</span>
+    size_cards:
+      - tier: "bad"
+        label: "1:1"
+        ratio: "1:1"
+        dim: "1080×1080"
+        verdict: "Don't post"
+      - tier: "ok"
+        label: "4:5"
+        ratio: "4:5"
+        dim: "1080×1350"
+        verdict: "Boost only"
+      - tier: "good"
+        label: "3:4"
+        ratio: "3:4"
+        dim: "1080×1440"
+        verdict: "Post this"
+    pill: "Carousels with music → Reels tab. Always add a track."
+
+  # ─── 9: CLIMAX (FULL MAGENTA-PURPLE GRADIENT BG — the climax beat) ───
+  - theme: accent
+    section: "THE PROOF"
+    kicker: 30 DAYS · 1 STUDIO
+    num_hero: "$44k"
+    num_label: SAVED · NO NEW HIRES · SAME TEAM
+    pill: "Eleven campaigns. Two designers. Different game."
+
+  # ─── 10: CTA (DARK + heavy glow — rhymes with cover) ───
+  - section: "THE ASK"
+    headline_html: |
+      Comment <span class="accent">STACK</span>
+      to get the doc.
+    subtext: "The exact 4-agent template we use with every client."
+    cover_pill: "FOLLOW @yourhandle"

@@ -30,6 +30,11 @@
       "name": "transcribe-audio",
       "source": "./plugins/transcribe-audio",
       "description": "Transcribe long, code-switched, or multi-language audio/video into clean verbatim Markdown using the Gemini API, with chunking and key rotation."
+    },
+    {
+      "name": "carousel-genius",
+      "source": "./plugins/carousel-genius",
+      "description": "Design and ship multi-slide social carousels using 5 reverse-engineered creator layouts. Works with any brand, or clean neutral defaults."
     }
   ]
 }

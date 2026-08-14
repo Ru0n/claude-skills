@@ -1,0 +1,72 @@
+# Example: Rahul layout — tactical "5 Claude skills designers need"
+# Hook archetype #5 (Listicle promise) + Rahul's all-caps display energy
+
+title: "5 Claude skills designers need in 2026"
+slug: "5-claude-skills-designers"
+layout: rahul
+
+brand:
+  name: YOUR BRAND
+  handle: your_handle
+
+slides:
+  # Slide 1: Hook (cover) — ALL-CAPS color swap
+  - section: SKILL FILES
+    headline_html: |
+      5 CLAUDE SKILLS
+      <span class="red">DESIGNERS NEED</span> IN 2026.
+
+  # Slide 2: Promise — set the stakes
+  - section: STAKES
+    kicker: WHY YOU'LL CARE
+    headline_html: |
+      MISS THESE AND YOUR
+      <span class="red">FIGMA WORKFLOW</span>
+      LOSES TO AGENTS.
+
+  # Slide 3: Step 1 — the imperative + terminal
+  - step_num: "01"
+    section: SKILL 01
+    step_imperative: "INSTALL FIGMA-MCP"
+    step_desc: "Talk to Figma from Claude in plain English. No more copy-paste."
+    terminal:
+      cmd: "claude install figma-mcp"
+      progress: "Connecting to Figma desktop..."
+      success: "Connected. 14 files indexed."
+    pill: "Same Figma. New leverage."
+
+  # Slide 4: Step 2
+  - step_num: "02"
+    section: SKILL 02
+    step_imperative: "ADD A BRAND SKILL"
+    step_desc: "Brand tokens locked. Every artifact stays on-brand."
+    terminal:
+      cmd: "claude install your-brand-skill"
+      progress: "Loading brand system..."
+      success: "11 colors. 2 fonts. 24 components."
+    pill: "Brand drift, dead."
+
+  # Slide 5: Step 3 — reframe ("Not X. Y.")
+  - step_num: "03"
+    section: SKILL 03
+    step_imperative: "WIRE PLAYWRIGHT"
+    step_desc: "Render HTML to PNG. Every slide pixel-perfect at 1080×1350."
+    terminal:
+      cmd: "node render_pngs.mjs ./out"
+      progress: "Rendering 7 slides..."
+      success: "Done. 7 PNGs ready to post."
+    pill: "From design to post in 11 minutes."
+
+  # Slide 6: Proof — receipt
+  - section: THE READ
+    kicker: WHAT THIS UNLOCKS
+    headline_html: |
+      MOST DESIGNERS SHIP
+      <span class="red">2 POSTS A WEEK.</span>
+      WITH THIS — 11.
+
+  # Slide 7: CTA — DM trigger
+  - section: THE ASK
+    headline_html: |
+      WHICH SKILL WOULD YOU
+      <span class="red">INSTALL FIRST?</span>
