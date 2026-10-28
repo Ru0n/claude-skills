@@ -1,0 +1,11 @@
+{
+  "name": "quick",
+  "displayName": "Quick",
+  "description": "Compresses an answer or a wall of text into the N most important points and nothing else.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["summary","tldr","claude-code"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "deeper",
+  "displayName": "Deeper",
+  "description": "Rewrites your ask the way a top professional in that field would frame it: the expert moves you didn't ask for, the raw source material, the specific methods, and an outside check that proves the result. Deeper, not bigger.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["prompting","planning","claude-code"]
+}

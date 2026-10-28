@@ -1,0 +1,11 @@
+{
+  "name": "bro",
+  "displayName": "Bro",
+  "description": "Restates the previous answer in plain human language with zero jargon, like explaining it to a friend.",
+  "version": "1.0.0",
+  "author": { "name": "Aashish Sapkota", "url": "https://github.com/Ru0n" },
+  "homepage": "https://github.com/Ru0n/claude-skills",
+  "repository": "https://github.com/Ru0n/claude-skills",
+  "license": "MIT",
+  "keywords": ["plain-language","explain","claude-code"]
+}

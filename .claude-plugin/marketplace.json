@@ -4,7 +4,7 @@
     "name": "Aashish Sapkota",
     "url": "https://github.com/Ru0n"
   },
-  "description": "A collection of standalone Claude Code skills: model prompting references, an iPhone-Mirroring automation guide, an audio/video transcription pipeline, an explanation-style skill, and a Higgsfield generation workflow.",
+  "description": "A collection of standalone Claude Code skills: model prompting references, prompt sharpening, plain-language and summary modes, an iPhone-Mirroring automation guide, a transcription pipeline, an explanation-style skill, a carousel designer, a pre-prod testing gauntlet, and a Higgsfield generation workflow.",
   "plugins": [
     {
       "name": "gemma-4-31b-prompting",
@@ -40,6 +40,21 @@
       "name": "testing",
       "source": "./plugins/testing",
       "description": "Iron-clad pre-production testing gauntlet — five evidence-based gates ending in a PROD GATE verdict."
+    },
+    {
+      "name": "deeper",
+      "source": "./plugins/deeper",
+      "description": "Rewrites your ask the way a top professional would frame it: expert moves, raw sources, specific methods, and an outside check. Deeper, not bigger."
+    },
+    {
+      "name": "bro",
+      "source": "./plugins/bro",
+      "description": "Restates the previous answer in plain language with zero jargon."
+    },
+    {
+      "name": "quick",
+      "source": "./plugins/quick",
+      "description": "Compresses an answer into the N most important points, nothing else."
     }
   ]
 }

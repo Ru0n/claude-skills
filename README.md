@@ -9,6 +9,9 @@ A collection of standalone [Claude Code](https://claude.com/claude-code) skills,
 - **`transcribe-audio`** — Turns audio/video files into clean verbatim Markdown transcripts using the Gemini API. Handles long recordings via chunking, model-cascade fallback, API-key rotation, and code-switched/transliterated speech (e.g. Nepali written in Roman script).
 - **`carousel-genius`** — Designs and ships multi-slide carousels (Instagram, LinkedIn, TikTok, X) using one of 5 reverse-engineered creator layouts (credited to their original creators). Works with any brand you specify, or clean neutral defaults if you don't.
 - **`testing`** — Iron-clad pre-production testing gauntlet: dual independent adversarial code review, a real non-prod test environment, a Chrome DevTools functional + UI sweep, a fix-and-retest loop, and a final zero-context adversarial agent — only claims "good to go" when every gate has evidence, not a guess.
+- **`deeper`**: Before doing an important ask, rewrites it the way a top professional in that field would: the expert moves you didn't ask for, the rawest source material to start from, the specific methods and tools, and an outside check that proves the result is right. Then hands you the sharper prompt. Deeper, not bigger.
+- **`bro`**: Restates the previous answer in plain human language with zero jargon, like explaining it to a friend.
+- **`quick`**: `/quick N` compresses an answer or a wall of text into the N most important points and nothing else.
 
 Each is a separate plugin — install only the ones you want.
 
@@ -25,6 +28,9 @@ Each is a separate plugin — install only the ones you want.
 /plugin install transcribe-audio@claude-skills
 /plugin install carousel-genius@claude-skills
 /plugin install testing@claude-skills
+/plugin install deeper@claude-skills
+/plugin install bro@claude-skills
+/plugin install quick@claude-skills
 ```
 
 Restart Claude Code (or run `/reload-plugins` if prompted) after installing.
@@ -40,7 +46,7 @@ Restart Claude Code. The leftover `.claude-plugin/plugin.json` in each folder is
 
 ## Requirements per skill
 
-- `gemma-4-31b-prompting`, `explain` — no external dependencies, pure reference/methodology skills.
+- `gemma-4-31b-prompting`, `explain`, `deeper`, `bro`, `quick` — no external dependencies, pure reference/methodology skills.
 - `iphone-mirroring` — macOS with the iPhone Mirroring app; some steps need Accessibility permissions granted to your terminal/Claude Code.
 - `higgsfield-generate` — a Higgsfield account/API access.
 - `transcribe-audio` — `ffmpeg`/`ffprobe` on PATH, `uv` for running the bundled script, and a free Gemini API key (`GEMINI_API_KEY`, get one at https://aistudio.google.com/apikey).
